@@ -138,7 +138,7 @@ export default function UpdateProfile() {
                 text: faceResult.error || 'Profile updated but face registration failed.' 
               });
             }
-          } catch (error) {
+          } catch {
             setMessage({ 
               type: 'error', 
               text: 'Profile updated but face registration failed.' 
@@ -161,8 +161,8 @@ export default function UpdateProfile() {
       localStorage.setItem('user', JSON.stringify(updatedUser));
       setUser(updatedUser);
 
-    } catch (error: any) {
-      setMessage({ type: 'error', text: error.message || 'Update failed' });
+    } catch (error: unknown) {
+      setMessage({ type: 'error', text: error instanceof Error ? error.message : 'Update failed' });
       setLoading(false);
     }
   };

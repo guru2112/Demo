@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Build query
-    const query: any = {
+    const query: Record<string, unknown> = {
       department: user.department,
       year: user.year,
       division: user.division,
@@ -61,7 +61,7 @@ export async function GET(request: NextRequest) {
     // Process sessions to include student's attendance status
     const attendanceRecords = sessions.map(session => {
       const studentAttendance = session.attendedStudents.find(
-        (attendance: any) => attendance.userId.toString() === studentId
+        (attendance: { userId: { toString: () => string } }) => attendance.userId.toString() === studentId
       );
 
       const isPresent = !!studentAttendance;

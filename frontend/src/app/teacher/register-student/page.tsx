@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import DashboardLayout from '@/components/layout/DashboardLayout';
 import { Camera, Upload, User, AlertCircle, CheckCircle } from 'lucide-react';
 
-export default function StudentRegister() {
+export default function TeacherRegisterStudent() {
   const [formData, setFormData] = useState({
     name: '',
     studentId: '',
@@ -138,12 +138,12 @@ export default function StudentRegister() {
   };
 
   return (
-    <DashboardLayout userRole="student">
+    <DashboardLayout userRole="teacher">
       <div className="max-w-2xl mx-auto">
         <div className="bg-white rounded-lg shadow p-6">
           <div className="flex items-center mb-6">
             <User className="h-6 w-6 text-indigo-600 mr-3" />
-            <h2 className="text-2xl font-bold text-gray-900">New Student Registration</h2>
+            <h2 className="text-2xl font-bold text-gray-900">Register New Student</h2>
           </div>
 
           {message && (

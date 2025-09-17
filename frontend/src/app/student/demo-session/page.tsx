@@ -34,7 +34,7 @@ export default function DemoSession() {
         setIsCapturing(true);
         setMessage({ type: 'info', text: 'Camera started. Position your face in the frame and click capture.' });
       }
-    } catch (error) {
+    } catch {
       setMessage({ type: 'error', text: 'Failed to access camera. Please check permissions.' });
     }
   };
@@ -128,7 +128,7 @@ export default function DemoSession() {
       } else {
         setMessage({ type: 'error', text: result.error || 'Face recognition test failed.' });
       }
-    } catch (error) {
+    } catch {
       setMessage({ type: 'error', text: 'Network error. Please try again.' });
     } finally {
       setLoading(false);

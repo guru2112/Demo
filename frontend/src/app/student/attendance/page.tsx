@@ -47,7 +47,7 @@ export default function StudentAttendance() {
       setUser(parsedUser);
       fetchAttendance(parsedUser._id);
     }
-  }, []);
+  }, []); // Only run on mount
 
   const fetchAttendance = async (userId: string) => {
     try {
@@ -66,8 +66,8 @@ export default function StudentAttendance() {
         console.error('Failed to fetch attendance:', result.error);
         setAttendance([]);
       }
-    } catch (error) {
-      console.error('Error fetching attendance:', error);
+    } catch {
+      console.error('Error fetching attendance');
       setAttendance([]);
     } finally {
       setLoading(false);

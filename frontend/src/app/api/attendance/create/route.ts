@@ -5,7 +5,7 @@ import User from '@/models/User';
 
 export async function POST(request: NextRequest) {
   try {
-    const { date, subject, department, year, division, teacherId } = await request.json();
+    const { date, subject, department, year, division, semester, teacherId } = await request.json();
 
     if (!date || !subject || !department || !year || !division || !teacherId) {
       return NextResponse.json(
@@ -46,6 +46,7 @@ export async function POST(request: NextRequest) {
       department,
       year,
       division,
+      semester,
       teacherId,
       startTime: new Date(),
       totalStudents,
@@ -62,6 +63,7 @@ export async function POST(request: NextRequest) {
         department: session.department,
         year: session.year,
         division: session.division,
+        semester: session.semester,
         startTime: session.startTime,
         totalStudents: session.totalStudents,
         status: session.status,

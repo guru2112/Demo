@@ -1,7 +1,7 @@
 'use client';
 
 import DashboardLayout from '@/components/layout/DashboardLayout';
-import { UserCheck, Users, Calendar, BookOpen, TrendingUp, BarChart3 } from 'lucide-react';
+import { UserCheck, Users, Calendar, BookOpen, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 
 export default function TeacherDashboard() {
