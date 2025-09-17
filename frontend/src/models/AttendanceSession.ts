@@ -7,6 +7,7 @@ export interface IAttendanceSession extends Document {
   department: string;
   year: number;
   division: string;
+  semester?: string;
   teacherId: mongoose.Types.ObjectId;
   startTime: Date;
   endTime?: Date;
@@ -47,6 +48,9 @@ const AttendanceSessionSchema = new Schema<IAttendanceSession>({
   division: {
     type: String,
     required: true,
+  },
+  semester: {
+    type: String,
   },
   teacherId: {
     type: mongoose.Schema.Types.ObjectId,

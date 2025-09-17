@@ -71,10 +71,7 @@ export default function LoginPage() {
             Sign in to your account
           </h2>
           <p className="mt-2 text-sm text-gray-600">
-            Or{' '}
-            <Link href="/auth/register" className="font-medium text-indigo-600 hover:text-indigo-500">
-              create a new account
-            </Link>
+            Please login with your existing credentials
           </p>
         </div>
 
