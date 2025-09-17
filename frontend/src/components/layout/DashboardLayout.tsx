@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactNode } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Camera, User, LogOut, Users, BookOpen, Calendar, UserCheck, TestTube } from 'lucide-react';
@@ -17,7 +17,7 @@ interface User {
 }
 
 interface DashboardLayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
   userRole: 'student' | 'teacher';
 }
 
