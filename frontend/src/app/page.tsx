@@ -17,15 +17,9 @@ export default function Home() {
             <nav className="flex space-x-4">
               <Link
                 href="/auth/login"
-                className="text-gray-600 hover:text-indigo-600 transition-colors"
-              >
-                Login
-              </Link>
-              <Link
-                href="/auth/register"
                 className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors"
               >
-                Register
+                Login
               </Link>
             </nav>
           </div>
@@ -45,13 +39,13 @@ export default function Home() {
           </p>
           <div className="mt-10 flex justify-center space-x-6">
             <Link
-              href="/auth/register?role=student"
+              href="/auth/login"
               className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
             >
               Student Portal
             </Link>
             <Link
-              href="/auth/register?role=teacher"
+              href="/auth/login"
               className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
             >
               Teacher Portal
