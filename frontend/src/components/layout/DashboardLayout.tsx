@@ -44,6 +44,7 @@ export default function DashboardLayout({ children, userRole }: DashboardLayoutP
     { href: '/student/register', icon: UserCheck, label: 'New Registration' },
     { href: '/student/update-profile', icon: User, label: 'Update Profile' },
     { href: '/student/demo-session', icon: TestTube, label: 'Demo Session' },
+    { href: '/student/mark-attendance', icon: Camera, label: 'Mark Attendance' },
     { href: '/student/attendance', icon: Calendar, label: 'My Attendance' },
   ];
 
