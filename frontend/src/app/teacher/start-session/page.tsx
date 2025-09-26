@@ -81,6 +81,10 @@ export default function StartSession() {
           sessionId: result.session.sessionId,
           totalStudents: result.session.totalStudents
         });
+        // Redirect to session monitor after a short delay
+        setTimeout(() => {
+          window.open(`/teacher/session-monitor/${result.session.sessionId}`, '_blank');
+        }, 2000);
         // Reset form
         setFormData({
           date: new Date().toISOString().split('T')[0],
@@ -152,6 +156,16 @@ export default function StartSession() {
                     Students can now mark their attendance using the face recognition system.
                     You can monitor the session from the attendance dashboard.
                   </p>
+                  <div className="mt-4 space-x-4">
+                    <a
+                      href={`/teacher/session-monitor/${sessionCreated.sessionId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                    >
+                      Monitor Session
+                    </a>
+                  </div>
                 </div>
               </div>
               <button
