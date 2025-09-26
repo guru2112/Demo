@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import DashboardLayout from '@/components/layout/DashboardLayout';
-import { Camera, CheckCircle, XCircle, AlertCircle } from 'lucide-react';
+import { Camera, CircleCheck as CheckCircle, Circle as XCircle, CircleAlert as AlertCircle } from 'lucide-react';
 
 interface UserData {
   _id: string;

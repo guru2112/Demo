@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import DashboardLayout from '@/components/layout/DashboardLayout';
-import { Users, Clock, CheckCircle, XCircle, RefreshCw } from 'lucide-react';
+import { Users, Clock, CircleCheck as CheckCircle, Circle as XCircle, RefreshCw } from 'lucide-react';
 
 interface SessionData {
   _id: string;
